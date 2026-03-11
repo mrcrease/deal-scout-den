@@ -99,3 +99,39 @@
 .animate-pulse-dot {
   animation: pulse-dot 2s ease-in-out infinite;
 }
+
+/* Card hover glow */
+.card-glow:hover {
+  box-shadow: 0 0 24px -8px hsl(var(--primary) / 0.15);
+}
+
+/* Smooth page entry */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in-up 0.3s ease-out;
+}
+
+/* Drawer slide */
+@keyframes slide-in-right {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+.animate-slide-in-right {
+  animation: slide-in-right 0.25s ease-out;
+}
+
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Table row selection feel */
+tr.active-row {
+  background: hsl(var(--accent));
+  box-shadow: inset 2px 0 0 hsl(var(--primary));
+}
